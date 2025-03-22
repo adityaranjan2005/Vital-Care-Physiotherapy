@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vital Care Physiotherapy - Form Generator</title>
+    <title>Vital Care Physiotherapy</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -235,11 +235,122 @@
                 display: none;
             }
         }
+
+        /* Add these media queries at the end of the style section, just before the print media query */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .preview-container {
+                width: 100%;
+                padding: 10px;
+            }
+            
+            .print-header {
+                flex-direction: column;
+            }
+            
+            .clinic-info {
+                text-align: left;
+                margin-top: 15px;
+            }
+            
+            .print-body {
+                flex-direction: column;
+            }
+            
+            .facilities-column {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #000;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .patient-info {
+                padding-left: 0;
+            }
+            
+            .patient-details {
+                flex-direction: column;
+            }
+            
+            .patient-field {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .field-value {
+                min-width: 200px;
+            }
+            
+            .logo-section {
+                justify-content: center;
+            }
+            
+            .logo-text > div:first-child {
+                text-align: center;
+            }
+            
+            .signature-line {
+                margin-top: 20px;
+            }
+            
+            .signature-box {
+                margin-right: 0;
+            }
+            
+            .step-buttons button {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .logo-text > div:first-child {
+                font-size: 16px !important;
+            }
+            
+            .doctor-name {
+                font-size: 14px;
+            }
+            
+            .doctor-info, .clinic-info {
+                font-size: 12px;
+            }
+            
+            .facilities-title, .home-collection-title {
+                font-size: 13px;
+            }
+            
+            .facilities-list, .section-list {
+                font-size: 12px;
+            }
+            
+            .field-label, .field-value {
+                font-size: 13px;
+            }
+            
+            .section-title {
+                font-size: 13px;
+            }
+            
+            .tata-logo img {
+                width: 100px;
+                height: 50px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Vital Care Physiotherapy - Form Generator</h1>
+        <h1>Vital Care Physiotherapy</h1>
         
         <!-- Step 1: Form -->
         <div id="step1" class="step active">
@@ -323,15 +434,15 @@
             const formattedDate = today.toISOString().substr(0, 10);
             document.getElementById('date').value = formattedDate;
             
-            // Pre-fill with sample data
-            document.getElementById('patientName').value = "Abhishek Tiwari";
+            // Pre-fill with instructions
+            document.getElementById('patientName').value = "Enter patient's full name";
             document.getElementById('gender').value = "Male";
-            document.getElementById('age').value = "31";
-            document.getElementById('complaints').value = "Pain in neck and upper shoulder.\nDiscomfort during bike riding.";
-            document.getElementById('diagnosis').value = "Rhomboids trigger\nTrapezius Myalgia";
-            document.getElementById('treatment').value = "Theraband Exercises\nIsometric Exercises\nTENS\nUS\nICE";
-            document.getElementById('supplements').value = "Zinc\nMagnesium\nVitamin D3-60K\nOmega-3";
-            document.getElementById('advice').value = "Apply Ice Pack around neck twice a day";
+            document.getElementById('age').value = "";
+            document.getElementById('complaints').value = "Enter each complaint on a new line\nExample:\nPain in neck and upper shoulder\nDiscomfort during bike riding";
+            document.getElementById('diagnosis').value = "Enter each diagnosis on a new line\nExample:\nRhomboids trigger\nTrapezius Myalgia";
+            document.getElementById('treatment').value = "Enter each treatment on a new line\nExample:\nTheraband Exercises\nIsometric Exercises\nTENS\nUS\nICE";
+            document.getElementById('supplements').value = "Enter each supplement on a new line (optional)\nExample:\nZinc\nMagnesium\nVitamin D3-60K";
+            document.getElementById('advice').value = "Enter additional advice on new lines (optional)\nExample: Apply Ice Pack around neck twice a day";
         });
         
         // Navigation between steps
