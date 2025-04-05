@@ -46,11 +46,8 @@ Vital Care Physiotherapy is a web-based application designed to streamline the p
 - Print-specific styles ensure the output is optimized for A4 paper.
 
 ## Project Structure
-.vitalcare-physiotherapy/ 
-├── .hintrc # Configuration for linting rules 
-├── index.html # Main HTML file containing the application 
-├── image.png # Logo for TATA 1mg (used in the prescription) 
-├── image2.png # Clinic logo (used in the prescription)
+
+.vitalcare-physiotherapy/ ├── .hintrc # Configuration for linting rules ├── index.html # Main HTML file containing the application ├── image.png # Logo for TATA 1mg (used in the prescription) ├── image2.png # Clinic logo (used in the prescription)
 
 
 ## How to Use
