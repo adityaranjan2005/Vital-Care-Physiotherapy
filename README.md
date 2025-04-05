@@ -48,11 +48,11 @@ Vital Care Physiotherapy is a web-based application designed to streamline the p
 ## Project Structure
 
 .vitalcare-physiotherapy/
-│   ├── .hintrc
-│   └── README.md
-│   └── image.png
-│   └── image2.png
-│   └── index.html
+    ├── .hintrc
+    └── README.md
+    └── image.png
+    └── image2.png
+    └── index.html
 
 
 
